@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+.project
+.classpath
+.settings/
+*.iml
+.idea/
+application.pid
+node_modules
+package-lock.json
+client/node_modules
+client/package-lock.json
+
+# Output folders
+out/
+target/
+
+
+# Log folder
+logs/
+
+build/
