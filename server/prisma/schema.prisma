@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:11111111@localhost:5432/restaurant"
+}
+
+
+model Category {
+  id    Int     @id @default(autoincrement())
+  name  String?
+  photo String?
+  positions Position[]
+}
+
+model Position {
+  id    Int     @id @default(autoincrement())
+  name  String?
+  photo String?
+  category            Category            @relation(fields: [categoryId], references: [id])
+  categoryId          Int
+}
